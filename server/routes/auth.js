@@ -7,7 +7,7 @@ router.get("/login/success", (req, res) => {
   if (req.user) {
     res.status(200).json({
       success: true,
-      message: "success",
+      message: "successfull",
       user: req.user,
       //   cookies: req.cookies
     });
@@ -25,7 +25,6 @@ router.get("/logout", (req, res) => {
   req.logout();
   res.redirect(CLIENT_URL);
 });
-
 
 router.get("/github", passport.authenticate("github", { scope: ["profile"] }));
 
