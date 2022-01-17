@@ -1,7 +1,6 @@
 import Navbar from "./components/Navbar";
 import "./App.css";
-import Home from "./routes/Home";
-import Post from "./routes/Post";
+import Repo from "./routes/Repo";
 import Login from "./routes/Login";
 import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
 import { useEffect, useState } from "react";
@@ -39,14 +38,13 @@ const App = () => {
       <div>
         <Navbar user={user} />
         <Routes>
-          <Route path="/" element={<Home />} />
           <Route
             path="/login"
             element={user ? <Navigate to="/" /> : <Login />}
           />
           <Route
-            path="/post/:id"
-            element={user ? <Post /> : <Navigate to="/login" />}
+            path="/"
+            element={user ? <Repo user={user} /> : <Navigate to="/login" />}
           />
         </Routes>
       </div>

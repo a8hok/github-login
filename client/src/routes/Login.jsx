@@ -1,11 +1,9 @@
 import Github from "../img/github.png";
 
 const Login = () => {
-
   const github = () => {
     window.open("http://localhost:5000/auth/github", "_self");
   };
-
 
   return (
     <div className="login">

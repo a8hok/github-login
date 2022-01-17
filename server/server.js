@@ -7,7 +7,11 @@ const authRoute = require("./routes/auth");
 const app = express();
 
 app.use(
-  cookieSession({ name: "session", keys: ["github"], maxAge: 24 * 60 * 60 * 100 })
+  cookieSession({
+    name: "session",
+    keys: ["github"],
+    maxAge: 24 * 60 * 60 * 100,
+  })
 );
 
 app.use(passport.initialize());
