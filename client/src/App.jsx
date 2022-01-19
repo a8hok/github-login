@@ -1,9 +1,10 @@
+import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
+import { useEffect, useState } from "react";
+
 import Navbar from "./components/Navbar";
 import "./App.css";
 import Repo from "./routes/Repo";
 import Login from "./routes/Login";
-import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
-import { useEffect, useState } from "react";
 
 const App = () => {
   const [user, setUser] = useState(null);
